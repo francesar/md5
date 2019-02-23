@@ -1,7 +1,8 @@
-#map {
-    height: 100%;
+#background {
+    background-color: rgb(39, 41, 59);
+    padding: 15px 10px;
 }
 
-#h1 {
-    color: yellow;
+#foreground {
+    background-color: rgb(29, 30, 45);
 }

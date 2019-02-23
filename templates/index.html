@@ -3,9 +3,21 @@
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     </head>
     <body>
-        <h1>hi</h1>
+        <div class="container" id="background">
+            <div class="row">
+                <div class="col-md-8">
+                    hi
+                </div>
+                <div class="col-md-4">
+                    bye
+                </div>
+            </div>
+        </div>
+
+
         <script src="{{ url_for('static', filename='js/index.js') }}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLTaDBwU1nzA8ntjfYV0Lo03TGQBU07k&callback=initMap"
         async defer></script>
