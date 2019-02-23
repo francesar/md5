@@ -1,8 +1,12 @@
-#background {
-    background-color: rgb(39, 41, 59);
-    padding: 15px 10px;
+body {
+    
 }
 
-#foreground {
-    background-color: rgb(29, 30, 45);
+#background {
+    background-color: rgb(39, 41, 59);
+}
+
+.content {
+    margin: 20px 10px;
+    color: white !important;
 }
