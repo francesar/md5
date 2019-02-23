@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
+    </head>
+    <body>
+        <h1>hi</h1>
+        <div id='map'></div>
+
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+        crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuLTaDBwU1nzA8ntjfYV0Lo03TGQBU07k&callback=initMap"
+        async defer></script>
+    </body>
+</html>
