@@ -34,9 +34,15 @@ body {
     height: 43%;
 }
 
+.info_tbl {
+    padding: 25px;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
 .werm-graphs {
     margin-top: 15px;
-    height: 50%;
+    height: 45%;
 }
 
 .werms {
