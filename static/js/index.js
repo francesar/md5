@@ -48,7 +48,7 @@ $(document).on("keyup", null, function(e) {
         draw_line({x: current_head["x"], y: current_head["y"] + canvas.height()/y_axis_ticks});
         current_depth += 1;
     }
-    if (Math.random() * 10 <= 1) {
+    if (Math.random() * 20 <= 1) {
         draw_circle("green", false);
         draw_text(false);
     }
