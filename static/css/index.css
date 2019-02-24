@@ -19,6 +19,13 @@ body {
     text-align: right;
 }
 
+.werm-img {
+    height: 50%;
+}
+
+.first {
+    margin-bottom: 10px;
+}
 
 .card {
     border: 0.5px rgb(96,210,181) solid;

@@ -57,7 +57,9 @@ function draw_line(e) {
         .attr("y2", e["y"])
         .attr("stroke", 'green');
     current_head = {x: e["x"], y: e["y"]};
+    draw_circle("red", true);
 }
+
 
 function getWermIDs() {
     return axios.get("/werms")
