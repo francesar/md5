@@ -3,6 +3,7 @@
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     </head>
@@ -11,19 +12,27 @@
             <div class="row">
                 <div class="col-md-8 content" id="werm-content">
                     <div class="row">
-                        <div class="col-md-1 align-self-center" id="align_right">
+                        <div class="col-md-1 align-self-center" id="align-right">
                             <i class="fas fa-chevron-left"></i>
                         </div>
-                        <div class="col-md-10 tabled_vert_align" id="worm_display">
-
+                        <div class="col-md-10 tabled_vert_align" id="werm-display">
+                            
                         </div>
                         <div class="col-md-1 align-self-center">
                             <i class="fas fa-chevron-right"></i>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 content" id="graph-content">
-                    bye
+                <div class="col-4 content" id="graph-content">
+                    <div class="row werm-graphs">
+                        hellow
+                    </div>
+                    <div class="row werms">
+                        <h1>WERMS</h1>
+                        {% for werm in werms %}
+                            <li>{{ werm.id }}</li>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
