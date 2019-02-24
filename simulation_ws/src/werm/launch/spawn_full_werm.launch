@@ -1,0 +1,9 @@
+<launch>
+	<include file="$(find werm_description)/launch/spawn_xacro.launch">
+		<arg name="x" value="0.0"/>
+		<arg name="y" value="0.0"/>
+		<arg name="z" value="0.2"/>
+		<arg name="xacro_robot_file" value="$(find werm_description)/robot/werm_controllers.urdf.xacro"/>
+		<arg name="robot_name" value="werm"/>
+	</include>
+</launch>

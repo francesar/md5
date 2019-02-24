@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="werm">
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/werm</robotNamespace>
+		</plugin>
+	</gazebo>
+
+	<xacro:macro name="body_link" params="base_name parent_name colour">
+		<inertial>
+		</inertial>
+		<collision>
+		</collision>
+	</xacro>
+</robot>
