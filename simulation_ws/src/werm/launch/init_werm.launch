@@ -1,0 +1,4 @@
+<launch>
+	<include file="$(find werm)/launch/spawn_full_werm.launch"/>
+	<include file="$(find werm)/launch/werm_full_control.launch"/>
+</launch>
