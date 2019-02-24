@@ -1,7 +1,7 @@
 import os
 import uuid
 
-from flask import Flask, render_template, send_file
+from flask import Flask, jsonify, render_template, request, send_file
 import requests
 
 app = Flask(__name__)
@@ -25,6 +25,21 @@ def index():
         Werm(id=7)
     ]
     return render_template("index.html", werms=werms, id=1)
+
+
+@app.route("/move")
+def move():
+    if not request.json():
+        return jsonify(err="can only send json")
+
+    json = request.json()
+    x = json["x"]
+    y = json["y"]
+
+    x = x + 1 if x < 1000 else 0
+    y = y + 1 if y < 1000 else 0
+
+    return jsonify(x=x, y=y)
 
 
 @app.route("/<typ>")

@@ -17,9 +17,6 @@ body {
     text-align: right;
 }
 
-.navbar {
-    background-color:rgb(96,210,181) !important;
-}
 
 .card {
     border: 0.5px rgb(29, 30, 45) solid;
@@ -29,7 +26,7 @@ body {
     padding: 5px;
 }
 
-#werm-display {
+.werm-display {
     height: 95%;
 }
 
@@ -37,15 +34,30 @@ body {
     height: 43%;
 }
 
+.info_tbl {
+    padding: 25px;
+    max-width: 100%;
+    white-space: nowrap;
+}
+
 .werm-graphs {
     margin-top: 15px;
-    height: 50%;
+    height: 45%;
 }
 
 .werms {
     margin-bottom: 15px;
+    padding: 5px;
 }
 
 .worm-list-item {
     cursor: pointer;
+}
+
+.total {
+    margin-top: 30px;
+}
+
+.navbar {
+    background-color:rgb(96,210,181) !important;
 }
