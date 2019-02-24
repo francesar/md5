@@ -3,16 +3,25 @@
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}"/>
     </head>
     <body>
-        <div class="container" id="background">
+        <div class="container-fluid" id="background">
             <div class="row">
-                <div class="col-md-8 content" id="werm-content">
-                    
+                <div class="col-8 content" id="werm-content">
+                    hello
                 </div>
-                <div class="col-md-4 content" id="graph-content">
-                    bye
+                <div class="col-4 content" id="graph-content">
+                    <div class="row werm-graphs">
+                        hellow
+                    </div>
+                    <div class="row werms">
+                        <h1>WERMS</h1>
+                        {% for werm in werms %}
+                            <li>{{ werm.id }}</li>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

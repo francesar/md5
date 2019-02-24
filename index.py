@@ -1,4 +1,5 @@
 import os
+import uuid
 
 from flask import Flask, render_template, send_file
 import requests
@@ -8,9 +9,19 @@ app = Flask(__name__)
 RADIO = "radio"
 SOUND = "sound"
 
+class Werm():
+    def __init__(self):
+        self.id = uuid.uuid4()
+
 @app.route("/")
 def index():
-    return render_template("index.html")
+    werms = [
+        Werm(),
+        Werm(),
+        Werm(),
+        Werm()
+    ]
+    return render_template("index.html", werms=werms)
 
 
 @app.route("/<typ>")
