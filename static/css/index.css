@@ -1,7 +1,51 @@
-#map {
-    height: 100%;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
-#h1 {
-    color: yellow;
+#background {
+    padding: 15px 10px;
+    background-color: rgb(29, 30, 45);
+}
+
+.content {
+    color: white;
+    height: 90%;
+    width: 100%;
+}
+
+#align-right {
+    text-align: right;
+}
+
+.navbar {
+    background-color:rgb(96,210,181) !important;
+}
+
+.card {
+    border: 0.5px rgb(29, 30, 45) solid;
+    border-radius: 5px;
+    background-color: rgb(39, 41, 59);
+    width: 100%;
+    padding: 5px;
+}
+
+#werm-display {
+    height: 95%;
+}
+
+.tbl {
+    height: 43%;
+}
+
+.werm-graphs {
+    margin-top: 15px;
+    height: 50%;
+}
+
+.werms {
+    margin-bottom: 15px;
+}
+
+.worm-list-item {
+    cursor: pointer;
 }

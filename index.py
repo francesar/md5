@@ -1,41 +1,43 @@
 import os
+import uuid
 
-from flask import Flask, render_template
-import googlemaps
+from flask import Flask, render_template, send_file
 import requests
 
 app = Flask(__name__)
 
-item_id = "20160707_195147_1057916_RapidEye-1"
-item_type = "REOrthoTile"
-asset_type = "visual"
+RADIO = "radio"
+SOUND = "sound"
 
-PL_API_KEY = "3bb840c665cb4593819faf26d1bf1867"
-MAPS_API_KEY = "AIzaSyCuLTaDBwU1nzA8ntjfYV0Lo03TGQBU07k"
-
-session = requests.Session()
-session.auth = (PL_API_KEY, '')
-
-gmap_client = googlemaps.Client(MAPS_API_KEY)
-print(gmap_client.geocode('Columbia University'))
-
-
-item = \
-  session.get(
-    ("https://api.planet.com/data/v1/item-types/" +
-    "{}/items/{}/assets/").format(item_type, item_id))
-
-# extract the activation url from the item for the desired asset
-item_activation_url = item.json()[asset_type]["_links"]["activate"]
-
-# request activation
-response = session.post(item_activation_url)
-
-print(response.status_code)
+class Werm():
+    def __init__(self, id):
+        self.id = id
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    werms = [
+        Werm(id=1),
+        Werm(id=2),
+        Werm(id=3),
+        Werm(id=4),
+        Werm(id=5),
+        Werm(id=6),
+        Werm(id=7)
+    ]
+    return render_template("index.html", werms=werms, id=1)
+
+
+@app.route("/<typ>")
+def get_png(typ):
+    # retrieve image from file system
+    path = None
+    if typ == RADIO:
+        print(RADIO)
+    elif typ == SOUND:
+        print(SOUND)
+
+    # send_file(path, mimetype="image/png")
+    return typ
 
 
 if __name__ == "__main__":
