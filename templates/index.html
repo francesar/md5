@@ -10,7 +10,7 @@
     <body>
         <div class="container-fluid" id="background">
             <div class="row">
-                <div class="col-md-8 content" id="werm-content">
+                <div class="col-md-7 content" id="werm-content">
                     <div class="row">
                         <div class="col-md-1 align-self-center" id="align-right">
                             <i class="fas fa-chevron-left"></i>
@@ -28,31 +28,28 @@
                         hellow
                     </div>
                     <div class="row werms">
-                        <table class="table table-dark">
-                            <thread>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Latitude</th>
-                                    <th scope="col">Longitude</th>
-                                    <th scope="col">Status</th>
-                                </tr>
-                            </thread>
-                            <tbody>
-                                    {% for werm in werms %}
-                                    <tr class="worm-list-item" onclick="">
-                                        <td>{{ werm.id }}</td>
-                                        <td>{{ werm.id }}</td>
-                                        <td>{{ werm.id }}</td>
-                                        <td>{{ werm.id }}</td>
+                        <div>
+                            <table class="table table-dark">
+                                <thread>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Latitude</th>
+                                        <th scope="col">Longitude</th>
+                                        <th scope="col">Status</th>
                                     </tr>
-                                    {% endfor %}
-                            </tbody>
-                            <!-- <row>
-                                {% for werm in werms %}
-                                    <li>{{ werm.id }}</li>
-                                {% endfor %}
-                            </row> -->
-                        </table>
+                                </thread>
+                                <tbody>
+                                        {% for werm in werms %}
+                                        <tr class="worm-list-item" onclick="">
+                                            <td>{{ werm.id }}</td>
+                                            <td>{{ werm.id }}</td>
+                                            <td>{{ werm.id }}</td>
+                                            <td>{{ werm.id }}</td>
+                                        </tr>
+                                        {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
