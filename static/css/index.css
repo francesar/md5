@@ -1,11 +1,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: rgb(29, 30, 45);
 }
 
 
 #background {
     padding: 15px 10px;
-    background-color: rgb(29, 30, 45);
+    
 }
 
 
@@ -30,6 +31,7 @@ body {
 
 .werm-display {
     height: 95%;
+    margin: 0px 15px;
 }
 
 .tbl {
@@ -62,5 +64,7 @@ body {
 }
 
 .navbar {
-    background-color:rgb(96,210,181) !important;
+    background-color:transparent !important;
+    border-color: transparent !important;
+    border-bottom: rgb(96,210,181) 1px solid !important;
 }

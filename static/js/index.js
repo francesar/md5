@@ -1,6 +1,5 @@
 var current_head = {};
 var canvas = $("#canvas");
-var data = [{x: 10, y: 20}, {x:40, y: 60}];
 const x_axis_ticks = 50;
 const y_axis_ticks = 35;
 
@@ -10,29 +9,24 @@ $(document).ready( function() {
     
     current_head = {x: width/2, y: 0};
     draw_circle("red", true);
+    $("#lon").text((Math.random() * 999).toFixed(3));
+    $("#lat").text((Math.random() * 999).toFixed(3));
 });
 
 $(document).on("keyup", null, function(e) {
     if (e.which == 37 || e.which == 65) {
         draw_line({x: current_head["x"] - canvas.width()/x_axis_ticks, y: current_head["y"]});
+        $("#lat").text(parseFloat(($("#lat").text()) - 1.012).toFixed(3));
     } else if (e.which == 39 || e.which == 68) {
         draw_line({x: current_head["x"] + canvas.width()/x_axis_ticks, y: current_head["y"]});
+        $("#lat").text((parseFloat(($("#lat").text())) + 1.012).toFixed(3));
     } else if (e.which == 40 || e.which == 83) {
         draw_line({x: current_head["x"], y: current_head["y"] + canvas.height()/y_axis_ticks});
     }
-    //Check if there's a active analysis of a person and if there is draw a special circle at current area.
-    //Currently it is random
+    if (Math.random() * 10 <= 1) {
+        draw_circle("green", false);
+    }
 });
-
-function make_x_gridlines(x) {		
-    return d3.axisBottom(x)
-        .ticks(5)
-}
-
-function make_y_gridlines(y) {		
-    return d3.axisLeft(y)
-        .ticks(5)
-}
 
 function draw_line(e) {
     delete_circle("head");
@@ -59,9 +53,7 @@ function draw_circle(color, head) {
         .attr("r", 10)
         .attr("stroke", color)
         .attr("fill", "none");
-    
     if (head) {
-
         line.attr("id", "head");
     }
 }
