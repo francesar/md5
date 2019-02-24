@@ -2,6 +2,7 @@ var current_head = {};
 var canvas = $("#canvas");
 const x_axis_ticks = 50;
 const y_axis_ticks = 35;
+var current_depth = 0;
 
 let wermIDs = 1;
 let selectedWorm;
@@ -45,14 +46,17 @@ $(document).on("keyup", null, function(e) {
         $("#lat").text((parseFloat(($("#lat").text())) + 1.012).toFixed(3));
     } else if (e.which == 40 || e.which == 83) {
         draw_line({x: current_head["x"], y: current_head["y"] + canvas.height()/y_axis_ticks});
+        current_depth += 1;
     }
     if (Math.random() * 10 <= 1) {
         draw_circle("green", false);
+        draw_text(false);
     }
 });
 
 function draw_line(e) {
-    delete_circle("head");
+    delete_element("head");
+    delete_element("head_text");
     var vis = d3.select("svg");
     var line = vis.append("line")
         .attr("x1", current_head["x"])
@@ -62,7 +66,21 @@ function draw_line(e) {
         .attr("stroke", 'green');
     current_head = {x: e["x"], y: e["y"]};
     draw_circle("red", true);
+    draw_text(true);
 }
+
+function draw_text(head) {
+    var vis = d3.select("svg");
+    var text = vis.append("text")
+        .attr("x", current_head["x"] + 5)
+        .attr("y", current_head["y"] - 5)
+        .attr("fill", "white")
+        .text("Depth: " + current_depth.toFixed(3));
+    if (head) {
+        text.attr("id", "head_text");
+    }
+}
+
 
 
 function getWermIDs() {
@@ -72,7 +90,7 @@ function getWermIDs() {
         });
 }
 
-function delete_circle(id) {
+function delete_element(id) {
     d3.select("svg").select("#" + id).remove();
 }
 
