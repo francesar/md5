@@ -23,6 +23,10 @@ body {
     height: 100%;
 }
 
+.tbl {
+    height: 45%;
+}
+
 .werm-graphs {
     height: 50%;
 }
