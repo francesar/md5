@@ -10,16 +10,19 @@ RADIO = "radio"
 SOUND = "sound"
 
 class Werm():
-    def __init__(self):
-        self.id = uuid.uuid4()
+    def __init__(self, id):
+        self.id = id
 
 @app.route("/")
 def index():
     werms = [
-        Werm(),
-        Werm(),
-        Werm(),
-        Werm()
+        Werm(id=1),
+        Werm(id=2),
+        Werm(id=3),
+        Werm(id=4),
+        Werm(id=5),
+        Werm(id=6),
+        Werm(id=7)
     ]
     return render_template("index.html", werms=werms)
 

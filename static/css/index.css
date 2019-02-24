@@ -14,3 +14,7 @@ body {
 .werm-graphs {
     height: 50%;
 }
+
+.worm-list-item {
+    cursor: pointer;
+}
