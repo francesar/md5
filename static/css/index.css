@@ -17,9 +17,6 @@ body {
     text-align: right;
 }
 
-.navbar {
-    background-color:rgb(96,210,181) !important;
-}
 
 .card {
     border: 0.5px rgb(29, 30, 45) solid;
@@ -44,8 +41,17 @@ body {
 
 .werms {
     margin-bottom: 15px;
+    padding: 5px;
 }
 
 .worm-list-item {
     cursor: pointer;
+}
+
+.total {
+    margin-top: 30px;
+}
+
+.navbar {
+    background-color:rgb(96,210,181) !important;
 }
