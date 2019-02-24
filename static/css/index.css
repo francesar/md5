@@ -9,12 +9,16 @@ body {
 
 .content {
     color: white;
-    height: 100%;
+    height: 90%;
     width: 100%;
 }
 
 #align-right {
     text-align: right;
+}
+
+.navbar {
+    background-color:rgb(96,210,181) !important;
 }
 
 .card {
@@ -30,16 +34,16 @@ body {
 }
 
 .tbl {
-    height: 40%;
+    height: 43%;
 }
 
 .werm-graphs {
-    margin-bottom: 15px;
+    margin-top: 15px;
     height: 50%;
 }
 
 .werms {
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .worm-list-item {

@@ -24,7 +24,7 @@ def index():
         Werm(id=6),
         Werm(id=7)
     ]
-    return render_template("index.html", werms=werms)
+    return render_template("index.html", werms=werms, id=1)
 
 
 @app.route("/<typ>")
